@@ -172,7 +172,7 @@
 	 width: 12rem;
 	 height: 3rem;
 }
- .return {
+ .back {
 	 position: absolute;
 	 top: 1.5rem;
 	 left: 1rem;
@@ -434,27 +434,29 @@
 	 -webkit-background-clip: text;
 	 -webkit-text-fill-color: transparent;
 }
- .pagemenu__pict {
+ .menucard__view {
 	 grid-column-start: 2;
 	 width: 100%;
 	 height: 250px;
 	 -o-object-fit: cover;
 	 object-fit: cover;
 }
- .pagemenu {
+ .menucard {
 	 display: grid;
 	 grid-template-columns: 1fr 90% 1fr;
 	 background-color: #f6f6f6;
 }
- .pagemenu__title {
+ .menucard__title {
 	 position: relative;
 	 border-radius: 1.5rem 1.5rem 0 0;
 	 padding: 2.4rem 0 0 1.5rem;
 	 margin-top: -2rem;
 	 background-color: #f6f6f6;
 }
- .pagemenu__title h1 {
+ .menucard__title h1 {
 	 margin-bottom: 0;
+	 font-family: "shrikhand";
+	 
  }
  .restaurants__heart {
 	 position: absolute;
