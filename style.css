@@ -101,7 +101,6 @@
 
   /* END SPIN LOADER */
 
-/* 768px */
 
  @media screen and (max-width: 768px) {
 	 .homepage {
@@ -120,7 +119,7 @@
  .operation:hover {
 	border-bottom: 0.5px solid #FF79DA;
 }
- }
+
  @media screen and (max-width: 768px) {
 	 .operation {
 		 background: #fff;
@@ -192,7 +191,6 @@
 	 margin: 0;
 	 overflow: hidden;
 	 white-space: nowrap;
-	 -o-text-overflow: ellipsis;
 	 text-overflow: ellipsis;
 }
  @media screen and (max-width: 320px) {
@@ -215,13 +213,12 @@
 	 margin: 0;
 	 overflow: hidden;
 	 white-space: nowrap;
-	 -o-text-overflow: ellipsis;
 	 text-overflow: ellipsis;
 }
  h3 {
 	 font-family: "roboto", sans-serif;
 	 font-size: 1.5rem;
-	 margin: 2.5 0 1.5 0;
+	 margin: 2.5px 0 1.5px 0;
 }
  h4 {
 	 color: #fff;
@@ -237,7 +234,6 @@
  .detail {
 	 overflow: hidden;
 	 white-space: nowrap;
-	 -o-text-overflow: ellipsis;
 	 text-overflow: ellipsis;
 }
  @media screen and (max-width: 320px) {
@@ -309,7 +305,6 @@
  .operation__process--number {
 	 color: #fff;
 	 background-color: #9356dc;
-	 border: 1px solid #9356dc;
 	 border-radius: 50%;
 	 padding: 4px 8px 4px 8px;
 	 margin: 0 1.5rem 0 -12px;
@@ -322,7 +317,7 @@
  .operation__process:hover .operation__process--icon {
 	 color: #FF79DA;
 }
- .restaurants__plug--tag {
+ .restaurants__plug--status {
 	 border-radius: 3px;
 	 background-color: #99e2d0;
 	 color: #217460;
@@ -356,15 +351,12 @@
 	 font-size: 1.5rem;
 	 color: #fff;
 	 padding: 1rem;
-	 background-image: -o-radial-gradient(20px 0, ellipse farthest-corner, #ff79da 0%, #9356dc 100%);
 	 background-image: radial-gradient(ellipse farthest-corner at 20px 0, #ff79da 0%, #9356dc 100%);
 	 cursor: pointer;
 }
 .btn__order:hover {
 	transform: scale(1.1);
 }
- 
- }
  @media screen and (max-width: 768px) {
 	 .btn__order {
 		 font-size: 1rem;
@@ -472,7 +464,6 @@
 	 border-radius: 1.5rem 1.5rem 0 0;
 	 width: 100%;
 	 height: 175px;
-	 -o-object-fit: cover;
 	 object-fit: cover;
 	 grid-column-start: 2;
 }
@@ -498,13 +489,14 @@
 }
  .restaurants__plug--heart:hover {
 	 opacity: 0;
-	transition: opacity 0.5s;
+	 transition: opacity 0.5s;
  }
  .restaurants__plug--heartanimation {
 	 position: absolute;
 	 cursor: pointer;
+	 font-weight: lighter;
 	 opacity: 0;
-	 transform-origin: bottom;
+	 transform-origin: top;
 	 font-size: 25px;
 	 right: 1.5rem;
 	 bottom: 1.5rem;
@@ -518,16 +510,10 @@
 	 content: "";
 	 opacity: 1;
 }
- .fa-gradient {
-	 background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-	 -webkit-background-clip: text;
-	 -webkit-text-fill-color: transparent;
-}
  .menucard__view {
 	 grid-column-start: 2;
 	 width: 100%;
 	 height: 250px;
-	 -o-object-fit: cover;
 	 object-fit: cover;
 }
  .menucard {
@@ -551,8 +537,6 @@
 	 position: absolute;
 	 cursor: pointer;
 	 opacity: 0;
-	 -webkit-transform-origin: bottom;
-	 -ms-transform-origin: bottom;
 	 transform-origin: bottom;
 	 opacity: 1;
 	 top: 2.5rem;
@@ -564,8 +548,6 @@
 	 position: absolute;
 	 cursor: pointer;
 	 opacity: 0;
-	 -webkit-transform-origin: bottom;
-	 -ms-transform-origin: bottom;
 	 transform-origin: bottom;
 	 top: 2.5rem;
 	 right: 8%;
@@ -573,9 +555,12 @@
 }
  .restaurants__heart--menu:hover {
 	 opacity: 1;
-	 -webkit-transition: opacity 0.6s;
-	 -o-transition: opacity 0.6s;
 	 transition: opacity 0.6s;
+}
+.like-btn-effect {
+	background: linear-gradient(#9356dc, #ff79da);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
  .menu {
 	 grid-column-start: 2;
@@ -597,20 +582,27 @@
 	 margin: 1rem 0 12px 0;
 	 cursor: pointer;
 	 overflow: hidden;
-	 -webkit-box-align: center;
-	 -ms-flex-align: center;
 	 align-items: center;
 	 width: 100%;
 	 border-radius: 1.5rem;
-	 -webkit-box-shadow: 3px 3px 10px #dedada;
 	 box-shadow: 3px 3px 10px #dedada;
 	 grid-column-start: 2;
 	 opacity: 0;
-	 -webkit-animation: fadein 1.2s 0.3s ease-out both, transform 0.3s;
-	 animation: fadein 1.2s 0.3s ease-out both, transform 0.3s;
-	 -o-transition: all 1.5s;
+	 animation: fadein 1.2s 0.3s ease both;
 	 transition: all 1.5s;
-	 -webkit-transition: all 1.5s;
+}
+@keyframes fadein {
+	0% {
+		transform: translateY(-50%);
+		opacity: 0;
+   }
+   50% {
+	opacity: 0.6; 
+   }
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+   }
 }
  @media screen and (max-width: 320px) {
 	 .btn {
@@ -627,30 +619,18 @@
 	 padding: 0 0 0 12px;
 }
  .menu__offer--detail {
-	 display: -webkit-box;
-	 display: -ms-flexbox;
 	 display: flex;
-	 -webkit-box-pack: justify;
-	 -ms-flex-pack: justify;
 	 justify-content: space-between;
 	 padding: 0 1.5rem 0 12px;
 }
  .menu__offer:hover > .menu__offer--animation {
 	 visibility: visible;
-	 -webkit-transition: all 0.5s ease-in;
-	 -o-transition: all 0.5s ease-in;
 	 transition: all 0.5s ease-in;
-	 -webkit-transform: translateX(-100%);
-	 -ms-transform: translateX(-100%);
 	 transform: translateX(-100%);
 }
  .menu__offer:hover > .menu__offer--animation .menu__offer--circle {
-	 -webkit-transform: rotate(-360deg);
-	 -ms-transform: rotate(-360deg);
-	 transform: rotate(-360deg);
-	 -webkit-transition-duration: 1s;
-	 -o-transition-duration: 1s;
-	 transition-duration: 1s;
+	 transform: rotate(360deg);
+	 transition-duration: 1.5s;
 }
  .menu__offer:hover > .menu__offer--detail {
 	 width: 75%;
@@ -673,7 +653,7 @@
  .footer__info {
 	 margin: 0 0 10px 0;
 }
- .whiteicon {
+ .icon-color {
 	 color: #fff;
 }
  .footerlogo {
@@ -685,31 +665,4 @@
 }
 footer h4 {
 	padding-top: 0.5rem;
-}
-
-/* fonction pour le menu "la palette du goût en cours d'écriture, penser à mettre le link dans le html pour activer les premières fonctions"*/
-
-@keyframes fadein {
-	 0% {
-		 -webkit-transform: translateY(-50%);
-		 transform: translateY(-50%);
-		 opacity: 0;
-	}
-	 100% {
-		 -webkit-transform: translateY(0);
-		 transform: translateY(0);
-		 opacity: 1;
-	}
-}
- @-webkit-keyframes fadein {
-	 0% {
-		 -webkit-transform: translateY(-50%);
-		 transform: translateY(-50%);
-		 opacity: 0;
-	}
-	 100% {
-		 -webkit-transform: translateY(0);
-		 transform: translateY(0);
-		 opacity: 1;
-	}
 }
