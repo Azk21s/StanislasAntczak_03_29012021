@@ -603,7 +603,7 @@ footer h4 {
 	overflow: hidden;
 	z-index: 3;
 	animation-name: loading;
-	animation-duration: 2.5s;
+	animation-duration: 2s;
   }
 .loader {
 	display: block;
