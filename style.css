@@ -153,6 +153,7 @@ p {
 	border-radius: 1.5rem;
 	box-shadow: 3px 3px 10px #dedada;
 	grid-column-start: 2;
+	cursor: pointer;
 }
 .operation__process--title {
 	grid-column-start: 2;
@@ -311,6 +312,28 @@ p {
 	background: linear-gradient(#9356dc, #ff79da);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+ }
+ .restaurants__heart--test {
+	position: absolute;
+	cursor: pointer;
+	transform-origin: bottom;
+	opacity: 1;
+	top: 2.5rem;
+	right: 15%;
+	font-size: 1.5rem;
+	color: transparent;
+	border: #000;
+ }
+ .restaurants__heart--test:hover {
+	position: absolute;
+	cursor: pointer;
+	opacity: 0;
+	transform-origin: bottom;
+	opacity: 1;
+	top: 2.5rem;
+	right: 15%;
+	font-size: 1.5rem;
+	color: linear-gradient(#9356dc, #ff79da);
  }
 
 	/* MENU */
