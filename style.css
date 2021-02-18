@@ -84,11 +84,6 @@ p {
    filter: brightness(110%);
    box-shadow: 5px 5px 5px #a19f9f;
 }
-.like-btn-effect {
-	background: linear-gradient(#9356dc, #ff79da);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
- }
 
   /* ! HOMEPAGE ! */
 
@@ -312,6 +307,11 @@ p {
 	content: "";
 	opacity: 1;
 }
+.like-btn-effect {
+	background: linear-gradient(#9356dc, #ff79da);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+ }
 
 	/* MENU */
 
