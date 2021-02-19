@@ -1,4 +1,5 @@
 /* Colonne vertébrale */
+
 html {
 	scroll-behavior: smooth;
   }
@@ -427,9 +428,9 @@ p {
 	transform: rotate(360deg);
 	transition-duration: 1.5s;
 }
-.menu__offer:hover > .menu__offer--detail {
-	width: 75%;
-	overflow: hidden;
+.menu__offer:hover > .menu__offer--detail > .price {
+    transition: all 0.5s ease-in;
+    margin-right: 20%;
 }
 .btn__order--container {
 	grid-column-start: 2;
