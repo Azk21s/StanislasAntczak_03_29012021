@@ -277,63 +277,35 @@ p {
 }
 .restaurants__plug--heart {
 	position: absolute;
-	cursor: pointer;
-	transform-origin: bottom;
 	opacity: 1;
-	font-size: 24px;
+	font-size: 23px;
 	right: 1.5rem;
 	bottom: 1.5rem;
 	cursor: pointer;
 }
 .restaurants__plug--heart:hover {
 	opacity: 0;
-	transition: opacity 0.5s;
+	transition: opacity 0.3s;
 }
 .restaurants__plug--heartanimation {
 	position: absolute;
-	cursor: pointer;
 	font-weight: lighter;
-	opacity: 0;
-	transform-origin: top;
+	transform-origin: bottom;
 	font-size: 25px;
-	right: 1.5rem;
+	right: 1.45rem;
 	bottom: 1.5rem;
+	opacity: 0;
 	cursor: pointer;
 }
 .restaurants__plug--heartanimation:hover {
 	opacity: 1;
 	transition: opacity 1s;
 }
-.restaurants__plug--heartanimation:hover::after {
-	content: "";
-	opacity: 1;
-}
+
 .like-btn-effect {
 	background: linear-gradient(#9356dc, #ff79da);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
- }
- .restaurants__heart--test {
-	position: absolute;
-	cursor: pointer;
-	transform-origin: bottom;
-	opacity: 1;
-	top: 2.5rem;
-	right: 15%;
-	font-size: 1.5rem;
-	color: transparent;
-	border: #000;
- }
- .restaurants__heart--test:hover {
-	position: absolute;
-	cursor: pointer;
-	opacity: 0;
-	transform-origin: bottom;
-	opacity: 1;
-	top: 2.5rem;
-	right: 15%;
-	font-size: 1.5rem;
-	color: linear-gradient(#9356dc, #ff79da);
  }
 
 	/* MENU */
@@ -377,23 +349,23 @@ p {
 }
 .restaurants__heart {
 	position: absolute;
-	cursor: pointer;
 	opacity: 0;
 	transform-origin: bottom;
-	opacity: 1;
 	top: 2.5rem;
 	right: 8%;
 	font-size: 1.5rem;
 	color: #000;
+	opacity: 1;
+	cursor: pointer;
 }
 .restaurants__heart--menu {
 	position: absolute;
-	cursor: pointer;
-	opacity: 0;
 	transform-origin: bottom;
 	top: 2.5rem;
 	right: 8%;
 	font-size: 1.5rem;
+	opacity: 0;
+	cursor: pointer;
 }
 .restaurants__heart--menu:hover {
 	opacity: 1;
